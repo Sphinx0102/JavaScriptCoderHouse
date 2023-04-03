@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script src="index.js"></script>
+    <title>Carrito de compra</title>
+</head>
+<body>
+    <div id="cart">
+    </div>
+    
+    <!-- Botones para agregar y eliminar artículos del carrito -->
+    <button onclick="addToCart({ name: 'Teclado Gamer', price: 10 });">Agregar Artículo 1</button>
+    <button onclick="addToCart({ name: 'Auriculares Gamer', price: 20 });">Agregar Artículo 2</button>
+    <button onclick="removeFromCart({ name: 'Teclado Gamer', price: 10 });">Eliminar Artículo 1</button>
+    <button onclick="removeFromCart({ name: 'Auriculares Gamer', price: 20 });">Eliminar Artículo 2</button>
+</body>
+</html>

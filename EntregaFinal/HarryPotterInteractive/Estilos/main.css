@@ -1,0 +1,497 @@
+@font-face {
+  font-family: "HarryFont";
+  src: url("Fonts/HARRYP__.TTF") format("truetype");
+}
+
+@font-face {
+  font-family: "Cinzel Decorative";
+  src: url("Fonts/Cinzel-Variable.ttf") format("truetype");
+}
+
+body {
+  font-family: "HarryFont", sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #e0d3c3;
+}
+
+#lore-text {
+  font-family: "Cinzel Decorative";
+  text-align: center;
+}
+
+.custom-cursor {
+  cursor: url("cursor/ico.png"), auto;
+}
+
+/* Comienzo de Header */
+header {
+  height: 5vh;
+}
+
+
+
+#nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border: 2px solid #8b0000;
+  border-radius: 0px 0px 10px 10px;
+  padding: 10px;
+  box-shadow: 0px 3px 3px #8b0000;
+}
+
+.button-style {
+  background-color: transparent;
+  border: none;
+  color: #1c1c1c;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-family: "HarryFont";
+  font-weight: 400;
+  font-size: 40px;
+}
+
+.button-style:hover {
+  color: #8b0000;
+  cursor: url("cursor/ico2.png"), auto;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button:hover {
+  background-color: #443838;
+  color: #fff;
+  cursor: url("cursor/ico2.png"), auto;
+}
+
+.button {
+  background-color: #fff;
+  color: #443838;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin: 10px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 26px;
+  color: #000000;
+  border-radius: 50%;
+  outline: 2px solid #fff;
+  transition-property: outline-offset, outline-color, background-color;
+  transition-duration: 0.25s;
+}
+
+.icon:hover {
+  outline-offset: 4px;
+  color: #fff;
+  cursor: url("cursor/ico2.png"), auto;
+}
+
+.icon:hover i {
+  animation: shake 0.25s;
+  cursor: url("cursor/ico2.png"), auto;
+}
+
+.icon--instagram:hover {
+  background-image: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  outline-color: #a02d76;
+  cursor: url("cursor/ico2.png"), auto;
+}
+
+.icon--linkedin:hover {
+  background-color: #0077b5;
+  outline-color: #0077b5;
+}
+
+.icon--github:hover {
+  background-color: #540374;
+  outline-color: #540374;
+}
+
+@keyframes shake {
+  10% {
+    transform: rotate(15deg);
+  }
+
+  20% {
+    transform: rotate(-15deg);
+  }
+
+  30% {
+    transform: rotate(15deg);
+  }
+
+  40% {
+    transform: rotate(-15deg);
+  }
+}
+
+/* fin de header */
+
+/* comienzo del main  */
+
+main {
+  flex: 1; /*Resta el 15% de la altura de la barra de navegación */
+  padding: 1rem;
+
+  box-sizing: border-box;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+section {
+  width: 100%;
+  height: 70vh; /* Establece la altura para que ocupe toda la pantalla */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  margin: 20px;
+  width: 350px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 2px 2px 10px #a6885e;
+  border: 2px solid #a6885e;
+  border-radius: 5px;
+  background-color: #fff2cc;
+  position: relative;
+}
+
+.card img {
+  height: 350px;
+  width: 347px;
+  object-fit: cover;
+  border: 3px solid #a6885e;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-right: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.card:hover img {
+  filter: blur(5px);
+  z-index: 0;
+  cursor: url("cursor/ico2.png"), auto;
+}
+
+.card input[type="checkbox"] {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: url("cursor/ico2.png"), auto;
+  z-index: 1;
+}
+
+.card input[type="checkbox"] + img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: url("cursor/ico2.png"), auto;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card p {
+  padding: 10px;
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  text-align: justify;
+  margin-right: 15px;
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  color: #4d4d4d;
+}
+
+.card:hover p {
+  opacity: 1;
+  cursor: url("cursor/ico2.png"), auto;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://i.imgur.com/0GMaA2i.jpg");
+  background-size: cover;
+  opacity: 0.5;
+  z-index: -2;
+}
+
+/* cards de personajes */
+
+#personajes {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  width: calc(100% - 2rem);
+}
+
+.card-personaje {
+  margin: 20px;
+  width: 250px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 2px 2px 10px #888;
+  border: 2px solid #daa520;
+  border-radius: 10px;
+  background-color: #f0e68c;
+  position: relative;
+  cursor: url("cursor/ico2.png"), auto;
+}
+
+.card-personaje img {
+  height: 250px;
+  width: 98%;
+  object-fit: cover;
+  border: 3px solid #ccc;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.card-personaje input[type="checkbox"] {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: url("cursor/ico2.png"), auto;
+  z-index: 1;
+}
+
+.card-personaje input[type="checkbox"] + img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: url("cursor/ico2.png"), auto;
+  transition: transform 0.2s ease-in-out;
+}
+
+.card-personaje p {
+  font-family: "Cinzel Decorative";
+  font-size: 16px;
+  text-align: center;
+  margin-right: 15px;
+  position: relative;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card-personaje:hover p {
+  opacity: 1;
+  cursor: url("cursor/ico2.png"), auto;
+}
+/* fin cards personaje */
+
+/* cards hechizos */
+
+#hechizos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hechizo-card {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  background-color: #fff2cc;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.hechizo-card:hover {
+  transform: scale(1.05);
+}
+
+.hechizo-card input[type="checkbox"] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: url("cursor/ico2.png"), auto;
+}
+
+.hechizo-card h1 {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.hechizo-card p {
+  font-size: 16px;
+  font-family: "Cinzel Decorative";
+  text-align: center;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* card profile */
+
+.perfil-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content:space-around;
+  background-color: #fff2cc;
+  border: 2px solid #a6885e;
+  box-shadow: 2px 2px 10px #a6885e;
+  padding: 10px;
+  margin: auto;
+  width: 470px;
+  height: 400px;
+  border-radius: 5px;
+  position: relative;
+}
+
+
+.perfil-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
+.perfil-card h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  color: #a6885e;
+  font-family: "Playfair Display", serif;
+}
+
+.perfil-card h3 {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  color: #a6885e;
+  font-family: "Playfair Display", serif;
+}
+
+.perfil-card img {
+  width: 150px;
+  max-width: 120px;
+  border: 3px solid #a6885e;
+  border-radius: 5px;
+}
+
+.perfil-card img,
+.perfil-card img {
+display: block;
+margin: 0 auto;
+}
+
+
+.hechizos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.hechizos-container p {
+  background-color: #a6885e;
+  color: #fff2cc;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 18px;
+  text-align: center;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+/* fin del main */
+
+/* style sweetAlert */
+
+.swal-overlay {
+  background-color: rgba(123, 204, 253, 0.55);
+}
+
+.swal-text {
+  font-family: "Cinzel Decorative";
+}

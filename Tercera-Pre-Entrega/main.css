@@ -1,0 +1,60 @@
+#container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.card-img-top {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.precio {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid #000;
+  color: #000;
+  background-color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilo al pasar el mouse por encima */
+.btn:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* Estilo para cuando se presiona el botón */
+.btn:active {
+  position: relative;
+  top: 2px;
+  left: 2px;
+}

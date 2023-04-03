@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="btn">
+        <button id="button" type="button" class="open-modal" data-open="modal">Click Para Ingresar una Ubicacion</button>
+        <label id="label-button">¡Copie el Link de ubicacion de Google Maps!</label>
+    </div>
+    <div class="modal" id="modal" data-animation="slideInOutleft">
+        <div class="modal-dialog">
+            <header class="modal-header">
+                Ubicacion Ingresada
+                <button class="modal-close" aria-label="modal close" data-close>
+                    ✕
+                </button>
+            </header>
+            <section class="modal-content">
+                <map class="modal-map" id="modalUbicacion">
+                    <!-- El Iframe del map se Genera aqui -->
+                </map>
+            </section>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>
