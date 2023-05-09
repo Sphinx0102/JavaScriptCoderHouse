@@ -18,6 +18,10 @@ body {
   background-color: #e0d3c3;
 }
 
+#lore{
+  margin-top: 50px;
+}
+
 #lore-text {
   font-family: "Cinzel Decorative";
   text-align: center;
