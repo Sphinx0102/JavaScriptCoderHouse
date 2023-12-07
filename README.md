@@ -7,7 +7,7 @@
 ##
 
 <p align="center">
-  <b>Technologies Implemented:</b>
+  <b>Technologies Used:</b>
 </p>
 
 ##
