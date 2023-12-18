@@ -10,7 +10,6 @@ const lore = document.getElementById('lore');
 const comenzar = document.createElement('button');
 const LoreComienzo = 'Bienvenid@ a esta Aventura donde podras tomar piel de uno de los personajes de la conocida Saga y formar parte de la gran batalla entre Brujos y Magos Tenebrosos.';
 
-
 let cont = 0;
 
 const bandos = [
