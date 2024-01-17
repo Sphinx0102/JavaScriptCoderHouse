@@ -17,7 +17,6 @@ let bandos;
 
 // Clases
 
-
 class Perfil {
 	bando;
 	personaje;
