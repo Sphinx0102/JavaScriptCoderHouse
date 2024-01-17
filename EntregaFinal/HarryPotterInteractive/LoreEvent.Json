@@ -1,0 +1,55 @@
+{
+    "bandos":[
+    {
+      "nombre":"orden",
+      "datos":{
+        "titulo": "Orden del Fénix",
+        "descripcion": "La Orden del Fénix es una organización secreta fundada por Albus Dumbledore para luchar contra Lord Voldemort y sus seguidores durante la Primera Guerra Mágica.",
+        "logo": "https://i.pinimg.com/736x/c9/c4/bb/c9c4bbeb0d74a36d48d4f484c9e77fd7.jpg"
+      },
+      "lore": [
+        "Caminando por los pasillos de la Orden del Fénix , escuchaste murmullos de estrategias secretas y viste a magos y brujas preparándose para la batalla.",
+        "Al unirte a la Orden del Fénix, te encontraste cara a cara con miembros legendarios como Alastor Moody y Nymphadora Tonks, quienes compartieron contigo sus experiencias de lucha contra las fuerzas oscuras.",
+        "En una misión de la Orden del Fénix, te aventuraste en el Bosque Prohibido, enfrentándote a criaturas mágicas y descubriendo secretos antiguos que han sido testigos de muchas batallas.",
+        "Durante una reunión de la Orden del Fénix, Madame Trelawney compartió una visión sobre la profecía que conecta su destino con el de Harry Potter, marcando el inicio de una nueva etapa en la lucha contra el mal.",
+        "En la Sala de los Menesteres, un lugar mágico en Hogwarts, planificaste estrategias con otros miembros de la Orden del Fénix antes de embarcarte en una misión crucial para proteger al mundo mágico.",
+        "Recibiste tu varita personalizada como reconocimiento por tu valentía y dedicación en la lucha contra las fuerzas tenebrosas al servicio de la Orden del Fénix.",
+        "Durante la Batalla de Hogwarts, luchaste hombro a hombro con magos y brujas de la Orden del Fénix, lanzando hechizos y defendiendo el castillo contra los seguidores de Lord Voldemort.",
+        "En la Cámara de los Secretos, descubriste antiguos escritos que revelaban la conexión de la Orden del Fénix con eventos mágicos de hace siglos, consolidando su legado.",
+        "Participaste en la creación de encantamientos protectores alrededor de Grimmauld Place, la sede secreta de la Orden del Fénix, garantizando la seguridad de los miembros durante los tiempos más oscuros.",
+        "En una emocionante persecución a través de callejones estrechos del Callejón Diagon, Dobby el elfo capturó a un mortífago que amenazaba con revelar la ubicación de la Orden del Fénix.",
+        "Te entrenaste con maestros en artes oscuras de la Orden del Fénix, perfeccionando tu habilidad para detectar magia negra y convirtiéndote en un valioso recurso para la causa.",
+        "Recibiste la visita de la lechuza mensajera de Dumbledore, que te entregó una misión secreta que te llevaría a explorar lugares remotos en busca de artefactos mágicos vitales para la causa de la Orden del Fénix.",
+        "En el Cuartel General de la Orden del Fénix, compartiste momentos de camaradería con otros miembros, intercambiando historias de heroísmo y risas en medio de la oscuridad que rodea al mundo mágico.",
+        "Durante la visita de la Orden del Fénix a Hogsmeade, te encontraste con antiguos amigos de la escuela y recibiste el apoyo de la comunidad mágica local en la lucha contra el mal.",
+        "Al descubrir un pasadizo secreto en Hogwarts, exploraste cámaras ocultas y pasillos olvidados que revelaron la historia oculta de la Orden del Fénix en la escuela de magia."
+      ]
+    }
+    ,
+    {
+      "nombre":"tenebroso",
+      "datos":{
+        "titulo": "Magos Tenebrosos",
+        "descripcion": "Los Magos Tenebrosos son aquellos que utilizan la magia para fines malignos y buscan el poder y la dominación sobre los demás.",
+        "logo": "https://i.pinimg.com/564x/33/86/3e/33863ea103afb60b1b960ed9b509ede0.jpg"
+      },
+      "lore": [
+        "En las sombras de los Magos Tenebrosos, conspiraste con otros magos para tejer hechizos oscuros que sumieron al mundo mágico en la oscuridad.",
+        "Al unirte a los seguidores de los Magos Tenebrosos, recibiste la Marca Tenebrosa como símbolo de tu devoción a la causa oscura y tu compromiso con la conquista total.",
+        "Durante una misión en tierras prohibidas, desenterraste artefactos malditos que amplificaron tu poder, otorgándote dominio sobre las fuerzas más sombrías de la magia.",
+        "En la Cámara de los Horrores, participaste en rituales oscuros que desataron criaturas mágicas abominables, sembrando el terror en el corazón de la sociedad mágica.",
+        "Recibiste la bendición del Señor Tenebroso, quien te otorgó una varita oscura imbuida con el poder de la magia negra más pura.",
+        "Durante la Noche de las Sombras, lideraste ataques sorpresa contra comunidades mágicas, dejando tras de ti un rastro de destrucción y desesperación.",
+        "En el Torneo de las Tinieblas, demostraste tu maestría en las artes oscuras al superar desafíos mortales diseñados para probar la lealtad de los Magos Tenebrosos.",
+        "Exploraste la Dimensión Tenebrosa, un reino mágico paralelo, donde la realidad se retuerce y los hechizos toman formas grotescas y aterradoras.",
+        "Te uniste a rituales de invocación, convocando a entidades sombrías y aprovechando su poder para aumentar tu propia magia negra.",
+        "En una misión de infiltración en el Ministerio de Magia, Augustus Rookwood manipuló a las autoridades desde las sombras, sembrando discordia y caos.",
+        "Te entrenaste en las Artes Prohibidas, perfeccionando maldiciones letales y hechizos que corrompen la esencia misma de la magia.",
+        "Recibiste el don de la Maldición Imperius, permitiéndote controlar las mentes de aquellos que se atrevieran a desafiar la supremacía de los Magos Tenebrosos.",
+        "En el Santuario de las Sombras, te reuniste con los líderes más oscuros, trazando planes para la conquista total y la instauración de un nuevo orden.",
+        "Durante la Celebración de las Sombras en el Callejón Knockturn, te destacaste como un líder entre los Magos Tenebrosos, recibiendo la admiración de tus siniestros compañeros.",
+        "Al descubrir un antiguo grimorio perdido, desbloqueaste secretos mágicos olvidados que te otorgaron poderes inimaginables, marcando tu ascenso como un mago tenebroso de leyenda."
+      ]
+    }
+  ]}
+  

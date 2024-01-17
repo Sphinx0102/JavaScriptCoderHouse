@@ -10,32 +10,9 @@ const lore = document.getElementById('lore');
 const comenzar = document.createElement('button');
 const LoreComienzo = 'Bienvenid@ a esta Aventura donde podras tomar piel de uno de los personajes de la conocida Saga y formar parte de la gran batalla entre Brujos y Magos Tenebrosos.';
 
-
 let cont = 0;
-
-const bandos = [
-	{
-		nombre: 'orden',
-		datos: {
-			titulo: 'Orden del Fénix',
-			descripcion:
-				'La Orden del Fénix es una organización secreta fundada por Albus Dumbledore para luchar contra Lord Voldemort y sus seguidores durante la Primera Guerra Mágica.',
-			logo: 'https://i.pinimg.com/736x/c9/c4/bb/c9c4bbeb0d74a36d48d4f484c9e77fd7.jpg',
-		},
-	},
-	{
-		nombre: 'tenebroso',
-		datos: {
-			titulo: 'Magos Tenebrosos',
-			descripcion:
-				'Los Magos Tenebrosos son aquellos que utilizan la magia para fines malignos y buscan el poder y la dominación sobre los demás.',
-			logo: 'https://i.pinimg.com/564x/33/86/3e/33863ea103afb60b1b960ed9b509ede0.jpg',
-		},
-	},
-];
-
-const bandosHashMap = createHashMap(bandos, 'nombre');
-
+let bandosHashMap;
+let bandos;
 // Fin Constantes Globales
 
 // Clases
@@ -47,8 +24,6 @@ class Perfil {
 	hechizos = [];
 
 }
-
-
 
 class Personajes {
 	personajeList = [];
@@ -236,24 +211,10 @@ function createPerfilCard(data) {
 	cardPerfil.appendChild(hechizosContainer);
 	switch(data.bando.nombre){
 		case 'orden':
-			loreEvent(`Habiendo elegido el bando ${data.bando.datos.titulo}, tomaste partido en la batalla como ${data.personaje.personaje}.\n
-				Dentro del campo de batalla, mientras batallabas contra un enemigo, utilizaste el hechizo ${data.hechizos[3].hechizo}, el cual te ayudó a poder girar las tornas y poder derrotarlo`);
+			loreEvent(randomNarrative(bandos[0].lore));
 			break;
 		default:
-
-			if (data.hechizos.some(hechizo => hechizo.hechizo === 'Avada Kedavra')) {
-			  loreEvent(`Habiendo elegido el bando ${data.bando.datos.titulo}, tomaste partido en la batalla como ${data.personaje.personaje}.\n
-			  En el punto álgido de la batalla, pronunciaste el Avada Kedavra con despiadada determinación. Un rayo verde trazó un arco mortal a través del campo de guerra, cobrando la vida de sus oponentes sin piedad. Los cuerpos caían inertes, dejando un silencio sepulcral en su estela.`);
-			} else if (data.hechizos.some(hechizo => hechizo.hechizo === 'Imperio')) {
-			  loreEvent(`Habiendo elegido el bando ${data.bando.datos.titulo}, tomaste partido en la batalla como ${data.personaje.personaje}.\n
-			  Lanzaste la Maldición Imperius en una táctica despiadada para controlar a los magos opositores. Uno tras otro, los valientes hechiceros caían bajo tu dominio, convirtiéndose en títeres de los oscuros deseos de los magos tenebrosos. Los cuerpos y mentes esclavizados eran utilizados como armas vivientes contra sus propios aliados, sembrando el caos y la traición en las filas enemigas.`);
-			} else if (data.hechizos.some(hechizo => hechizo.hechizo === 'Crucio')) {
-			  loreEvent(`Habiendo elegido el bando ${data.bando.datos.titulo}, tomaste partido en la batalla como ${data.personaje.personaje}.\n
-			  Desataste el hechizo Cruciatus en medio del campo de batalla, provocando que los gritos de agonía resonaran en el aire. Tus enemigos se retorcían y caían al suelo, incapaces de soportar el intenso sufrimiento impuesto por la maldición. Además, aquellos valientes que lograban resistir eran embrujados con una oscuridad que los consumía lentamente, convirtiéndolos en sombras de lo que una vez fueron.`);
-			} else {
-			  loreEvent(`Habiendo elegido el bando ${data.bando.datos.titulo}, tomaste partido en la batalla como ${data.personaje.personaje}.\n
-			  Dentro del campo de batalla, mientras batallabas contra un mago, utilizaste el hechizo ${data.hechizos[3].hechizo}, el cual te ayudó a obtener ventaja y, consecuentemente, terminar matando a dicho mago.`);
-			}
+			loreEvent(randomNarrative(bandos[1].lore));
 			break;
 	}
 	
@@ -261,7 +222,10 @@ function createPerfilCard(data) {
 }
 
 
-
+function randomNarrative(narrative) {
+	const indexRandom = Math.floor(Math.random() * narrative.length);
+	return narrative[indexRandom];
+}
 
 
 
@@ -272,19 +236,24 @@ function createCard(data) {
 	const checkbox = document.createElement('input');
 
 	card.classList.add('card');
+	//card de personaje
 	if (data.personaje) {
 		if (data.casaDeHogwarts != 'ninguna') {
 			imagen.src = data.imagen;
 			description.textContent = data.personaje;
 			checkbox.type = 'checkbox';
 		}
-	} else if (data.uso) {
+	} 
+	//card de hechizo
+	else if (data.uso) {
 		const nombre = document.createElement('h1');
 		nombre.textContent = data.hechizo;
 		card.appendChild(nombre);
 		description.textContent = data.uso;
 		checkbox.type = 'checkbox';
-	} else {
+	} 
+	//card de bando
+	else {
 		imagen.src = data.datos.logo;
 		description.textContent = data.datos.descripcion;
 		checkbox.type = 'checkbox';
@@ -317,7 +286,7 @@ function createCard(data) {
 		hechizosSection.appendChild(card);
 	}
 	else {
-		console.log('Error al Crear la card');
+		console.log('Error al Crear la card', data);
 	}
 	card.appendChild(checkbox);
 
@@ -440,13 +409,34 @@ function buttonEvent(element) {
 	})
 }
 
+async function fetchJson() {
+	try {
+	  const response = await fetch('LoreEvent.json');
+	  
+	  if (!response.ok) {
+		throw new Error('Error al cargar el archivo JSON');
+	  }
+  
+	  const jsonData = await response.json();
+	  const bandosJSON = jsonData.bandos;
+  
+	  return bandosJSON;
+	} catch (error) {
+	  console.error('Error:', error);
+	  throw error; // Propagar el error para manejarlo en la función llamadora si es necesario
+	}
+  }
+  
 
 
-function main() {
+async function main() {
 	
 	loreEvent(LoreComienzo);
+	bandos = await fetchJson();
+		
+	bandosHashMap = createHashMap(bandos, 'nombre');
+	bandos.forEach((bando) => createCard(bando));
 
-	
 	harryWiki.loadApi()
 	swal({
 		title: 'Cargando...',
@@ -459,7 +449,7 @@ function main() {
 
 	console.log(perfil);
 
-	bandos.forEach((bando) => createCard(bando));
+	
 	buttonHome();
 
 
